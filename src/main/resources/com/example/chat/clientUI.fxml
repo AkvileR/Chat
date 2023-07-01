@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="448.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.chat.ClientUIController">
+
+    <Button layoutX="440.0" layoutY="258.0" onAction="#sendMessage" text="Send to all"
+            AnchorPane.bottomAnchor="164.66666666666669" AnchorPane.rightAnchor="30.33333333333337"/>
+    <TextField fx:id="tfMessage" layoutX="14.0" layoutY="258.0" prefHeight="26" prefWidth="421.0"
+               promptText="Type message" AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="14.0"/>
+    <Label fx:id="label" layoutX="14.0" layoutY="14.0" text="Client window" AnchorPane.leftAnchor="14.0"
+           AnchorPane.topAnchor="14.0">
+        <font>
+            <Font name="Arial Rounded MT Bold" size="23">
+            </Font>
+        </font>
+    </Label>
+    <ListView fx:id="messageView" layoutX="14.0" layoutY="41.0" prefHeight="204.0" prefWidth="514.0"
+              AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="15.0"
+              AnchorPane.topAnchor="41.0"/>
+    <Button layoutX="312.0" layoutY="15.0" mnemonicParsing="false" onAction="#connect" prefHeight="25.0"
+            prefWidth="63.0" text="Connect" AnchorPane.rightAnchor="102.66666666666669" AnchorPane.topAnchor="15.0"/>
+    <Button layoutX="386.0" layoutY="15.0" mnemonicParsing="false" onAction="#leaveRoom" text="Leave room"
+            AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0"/>
+    <Button layoutX="305.0" layoutY="311.0" mnemonicParsing="false" onAction="#sendPrivateMessage"
+            text="Send to selected" AnchorPane.rightAnchor="134.0"/>
+    <ListView fx:id="clientView" layoutX="16.0" layoutY="311.0" prefHeight="90.0" prefWidth="273.0"
+              AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="16.0"/>
+    <Button layoutX="16.0" layoutY="408.0" mnemonicParsing="false" onAction="#updateList" text="Update list"
+            AnchorPane.bottomAnchor="14.666666666666668" AnchorPane.leftAnchor="16.0"/>
+    <Label layoutX="16.0" layoutY="294.0" text="Active people" AnchorPane.bottomAnchor="136.66666666666666"
+           AnchorPane.leftAnchor="16.0"/>
+</AnchorPane>
